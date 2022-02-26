@@ -16,7 +16,7 @@ public class EmiCalculator {
               
             System.out.println("Principal amount(1k to 1cr.): ");
             Principle = scanner.nextInt();
-            if (Principle>=1000 || Principle<=10000000){
+            if (Principle>=1000 && Principle<=10000000){
                 break;
             }
              System.out.println("Enter correct value");
@@ -27,7 +27,7 @@ public class EmiCalculator {
                 System.out.println("Annual Rate of Interest: ");
             AnnualRateofInterest = scanner.nextFloat();
             
-        if (AnnualRateofInterest>0 || AnnualRateofInterest<=50) {
+        if (AnnualRateofInterest>0 && AnnualRateofInterest<=50) {
             MonthlyRateofInterest = AnnualRateofInterest/MONTHS/PERCENTAGE;
                 break;
         }
@@ -36,7 +36,7 @@ public class EmiCalculator {
             while (true) {
             System.out.println("Years: ");
             Years = scanner.nextInt();
-           if (Years>0 || Years<=30){
+           if (Years>0 && Years<=30){
             Years = 12*Years;
             break;
         }
