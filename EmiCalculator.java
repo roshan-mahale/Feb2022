@@ -32,10 +32,7 @@ public class EmiCalculator {
                 break;
         }
            System.out.println("Enter between 0-50: " );
-          
-
-                
-          
+    } 
             while (true) {
             System.out.println("Years: ");
             Years = scanner.nextInt();
@@ -57,4 +54,3 @@ public class EmiCalculator {
         
     }
 } 
-}
