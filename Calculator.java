@@ -1,10 +1,11 @@
 import java.util.Scanner;
 public class Calculator {
 public static void main(String[] arg) { 
-    try (Scanner obj = new Scanner(System.in)) {
+   Scanner obj = new Scanner(System.in);
         float a, b;
         char operator;
         
+        try {
         System.out.println("Enter no.: ");
         a = obj.nextFloat();
         System.out.println("Enter no.: ");
@@ -41,13 +42,19 @@ public static void main(String[] arg) {
                 System.out.println("Enter correct operator");
                 return;
             }
-        }
+        } 
+        
+        
+
+    } catch (NumberFormatException exception){
+        System.out.println("Number Only Allowed");
+    } 
+     catch (Exception e) {
+        System.out.println("Report Error 022-64536736");
     }
-    
-    
-    
-    
-    
+    finally {
+        obj.nextFloat();
+    }
 
 }
 
