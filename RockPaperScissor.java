@@ -5,8 +5,9 @@ public class RockPaperScissor {
     public static String rock = "rock";
     public static String paper = "paper";
     public static String scissor = "scissor";
+    private static Scanner sc;
     
-        public static <computerMove> void main(String[] args) {
+        public static void main(String[] args) {
        System.out.println("Enter rock\\ paper\\ scissor");
 
        String playerMove = getPlayerMove();
@@ -21,15 +22,16 @@ public class RockPaperScissor {
        else 
        System.out.println(computerMove.equals(rock) ? "Computer Win":"Player Win");
 
-        
+       
        
     }
     public static String getPlayerMove() {
-       Scanner sc = new Scanner(System.in);
-       String input = sc.next();
-       String playermove = input.toLowerCase();
-       System.out.println("Player Move is: "+playermove);
-       return playermove;
+       try (Scanner sc = new Scanner(System.in)) {
+        String input = sc.next();
+           String playermove = input.toLowerCase();
+           System.out.println("Player Move is: "+playermove);
+           return playermove;
+    }
 
 
     }
